@@ -67,4 +67,10 @@ reset.addEventListener("click", () => {
   let num = 0;
   tip.innerHTML = num.toFixed(2);
   total.innerHTML = num.toFixed(2);
+  for(let each of percentage){
+    if (each.classList.contains('back')) {
+     each.classList.remove('back')
+   }
+ 
+  }
 });
