@@ -44,10 +44,12 @@ label {
   margin-top: 7px;
   border: 0;
 }
-
-input:hover{
-  border: 2px solid hsl(172, 67%, 45%);
+input::-webkit-outerer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
 }
+
 .form {
   position: relative;
   margin: 15px 0 20px 0;
@@ -67,7 +69,6 @@ section p:nth-child(1) {
 .grid-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 20px;
 }
 .item {
   width: 145px;
@@ -78,29 +79,22 @@ section p:nth-child(1) {
   padding: 4px 5px;
   color: white;
   border: 0;
+  margin: 5px 5px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .item3 {
-  background-color:hsl(172, 67%, 45%);
+  background-color: hsl(184, 14%, 56%);
   color: hsl(183, 100%, 15%);
 }
-.item4 {
-  width: 145px;
-  height: 32px;
-  background-color: hsl(183, 100%, 15%);
-  border-radius: 3px;
-  text-align: center;
-  padding: 4px 5px;
-  color: white;
-  border: 0;
-}
+
 .item6 {
- 
   background-color: hsl(189, 41%, 97%);
   border: 0;
   color: hsl(183, 100%, 15%);
 }
-.item6:hover{
+.item6:hover {
   border: 2px solid hsl(172, 67%, 45%);
 }
 
@@ -163,14 +157,13 @@ section p:nth-child(1) {
   text-align: center;
   margin-top: 70px;
 }
-.btn:hover{
+.btn:hover {
   background-color: hsl(185, 41%, 84%);
 }
 
 .total-price {
   text-align: right;
 }
-
 
 .total-price p:nth-child(1),
 .total-price p:nth-child(2) {
@@ -193,17 +186,21 @@ section p:nth-child(1) {
     padding: 10px 30px;
     margin: 100px auto;
   }
+  .item{
+    width:90px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 15px;
+   }
 
   .tip-calculate {
     width: 50%;
     height: 330px;
     margin-top: 10px;
   }
-  .grid-container {
-    gap: 15px;
-  }
-  
-   .item6 {
+
+  .item6 {
+    width: 90px;
     background-color: hsl(189, 41%, 97%);
     border: 0;
     color: hsl(183, 100%, 15%);
