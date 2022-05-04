@@ -90,6 +90,12 @@ section p:nth-child(1) {
 }
 
 .item6 {
+  width: 145px;
+  height: 32px;
+  border-radius: 3px;
+  text-align: center;
+  padding: 4px 5px;
+  margin: 5px 5px;
   background-color: hsl(189, 41%, 97%);
   border: 0;
   color: hsl(183, 100%, 15%);

@@ -39,9 +39,6 @@ percentage.forEach((percent) => {
 });
 // custom eventlistener
 custom.addEventListener("keyup", () => {
-  if (customInput.contains('back')) {
-    customInput.remove('back')
-  }
   billPercent = customInput.value;
 });
 // number of people eventlistener
