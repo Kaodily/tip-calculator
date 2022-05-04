@@ -29,7 +29,7 @@ percentage.forEach((percent) => {
     for (let each of percentage) {
       if (each.classList.contains("back")) {
         each.classList.remove("back");
-        customInput.value = 0;
+        customInput.value = '';
       }
     }
 
@@ -40,6 +40,10 @@ percentage.forEach((percent) => {
 // custom eventlistener
 custom.addEventListener("keyup", () => {
   billPercent = customInput.value;
+  if (numOfPeople.value === '') {
+    tip.innerHTML = customInput.value;
+    total.innerHTML =  Number(customInput.value) + Number(input.value)
+  }
 });
 // number of people eventlistener
 form.addEventListener("keyup", () => {
@@ -61,9 +65,9 @@ form.addEventListener("keyup", () => {
 });
 // eventlistener to reset
 reset.addEventListener("click", () => {
-  input.value = 0;
-  numOfPeople.value = 0;
-  customInput.value = 0;
+  input.value = '';
+  numOfPeople.value = '';
+  customInput.value = '';
   let num = 0;
   tip.innerHTML = num.toFixed(2);
   total.innerHTML = num.toFixed(2);
